@@ -1,4 +1,15 @@
-host: 'localhost'
-adapter: 'postgresql'
-encoding: utf-8
-database: 'test'
+development:
+adapter: postgresql
+encoding: unicode
+database: development
+pool: 5
+username: ubuntu
+password:
+
+test:
+adapter: postgresql
+encoding: unicode
+database: test
+pool: 5
+username: ubuntu
+password:
