@@ -66,11 +66,13 @@ end
 end
 
 task :default do 
-  options = {"rake:db migrate": "Will run migrations", 
-    "rake:db create": "Will create a database",
-    "rake:db drop": "Will drop the database",
-    "rake:db reset": "Will reset the database",
-    "rake g:migration": "Will create a migration" }
+  options = { 
+              "rake db:create": "Will create a database",
+              "rake db:migrate": "Will run migrations", 
+              "rake db:drop": "Will drop the database",
+              "rake db:reset": "Will reset the database",
+              "rake g:migration": "Will create a migration" 
+            }
   options.each do |h, v|
     puts "#{h}: #{v}"
   end

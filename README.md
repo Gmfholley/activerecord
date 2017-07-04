@@ -3,6 +3,8 @@
 ```
 => Should install a bunch of ruby gems
 
+
+On Cloud 9, start postgres services.
 ```
  $ sudo service postgresql start
 ```
@@ -23,14 +25,15 @@ Test that your gems are loaded correctly and rake tasks are available.
 ```
    $ rake
    =>
-  rake:db migrate: Will run migrations
-  rake:db create: Will create a database
-  rake:db drop: Will drop the database
-  rake:db reset: Will reset the database
+  rake db:create: Will create a database
+  rake db:migrate: Will run migrations
+  rake db:drop: Will drop the database
+  rake db:reset: Will reset the database
   rake g:migration: Will create a migration
 ```
 
 Create your database.  (Only needs to happen once.)
+
 ```
   $ rake db:create
 ```
@@ -87,4 +90,6 @@ $ irb
    => "Wendy" 
   2.3.1 :006 > a.save
    => true 
+  2.3.1 :006 > exit
+$
 ```
