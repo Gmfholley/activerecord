@@ -51,7 +51,7 @@ namespace :g do
     path = File.expand_path("../db/migrate/#{timestamp}_#{name}.rb", __FILE__)
     migration_class = name.split("_").map(&:capitalize).join
 
-    File.open(path, 'w') do |file|
+    File.open(path, 'w:utf-8') do |file|
       file.write <<-EOF
 class #{migration_class} < ActiveRecord::Migration
   def change
