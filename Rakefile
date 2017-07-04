@@ -53,7 +53,7 @@ namespace :g do
 
     File.open(path, 'w:utf-8') do |file|
       file.write <<-EOF
-class #{migration_class} < ActiveRecord::Migration
+class #{migration_class} < ActiveRecord::Migration[5.0]
   def change
   end
 end
