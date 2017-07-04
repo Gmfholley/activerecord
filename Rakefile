@@ -24,6 +24,7 @@ namespace :db do
     sql.each do |s|
       ActiveRecord::Base.connection.execute(s)
     end
+    puts "Cloud9 setup."
   end
   
   desc "Create the database"
