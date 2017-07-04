@@ -16,9 +16,8 @@ Test postgres is working.
  postgres=#
 ```
 
-`\q` quits postgres
+`\q` quits postgres.
 
-If it prompts you for a name and password, do NOT type one in.  Press ENTER to continue.
 
 
 Test that your gems are loaded correctly and rake tasks are available.
@@ -30,6 +29,13 @@ Test that your gems are loaded correctly and rake tasks are available.
   rake db:drop: Will drop the database
   rake db:reset: Will reset the database
   rake g:migration: Will create a migration
+```
+
+
+Set up postgres for Cloud9. (Only needs to happen once.)
+
+```
+  $ rake db:setupC9
 ```
 
 Create your database.  (Only needs to happen once.)
